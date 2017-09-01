@@ -2,7 +2,7 @@
 
 // var xhr = new XMLHttpRequest();
 // var queryCampaign = '';
-var url = 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453';
+var url = 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453&callback=?';
 
  //xhr.open('POST',url,true);
 //xhr.responseType = 'text';
@@ -21,7 +21,7 @@ function createCORSRequest(method, url) {
     // Check if the XMLHttpRequest object has a "withCredentials" property.
     // "withCredentials" only exists on XMLHTTPRequest2 objects.
     xhr.open(method, url, true);
-    console.log('1 aj');
+    console.log('1 aj cb');
 
   } else if (typeof XDomainRequest != "undefined") {
 
@@ -62,8 +62,8 @@ $('.get-data').click(function() {
 
 
 $.ajax({
-    url: 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453' ,
-    type: "POST",
+    url: 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453&callback=?' ,
+    type: "GET",
     data: {},
     dataType: 'json',
     xhrFields: {
