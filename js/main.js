@@ -52,6 +52,17 @@ if (!xhr) {
 
 $('.get-data').click(function() {
 
+
+$.ajax({
+    url: url ,
+    dataType: 'JSONP',
+    jsonpCallback: 'callback',
+    type: 'GET',
+    success: function (data) {
+        console.log(data);
+    }
+});
+
 // 	$.ajax({
 // 	    	 // crossOrigin: true,
 // 	    	url: 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453',
