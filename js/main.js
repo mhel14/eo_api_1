@@ -4,10 +4,10 @@ var xhr = new XMLHttpRequest();
 var queryCampaign = '';
 var url = 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453';
 
- xhr.open('GET',url,true);
+ xhr.open('POST',url,true);
 xhr.responseType = 'text';
  // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
- xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+ // xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
  xhr.send();
 
 function getSummary(id) {
@@ -18,7 +18,7 @@ $('.get-data').click(function() {
 	$.ajax({
 	    	 // crossOrigin: true,
 	    	url: 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453',
-	    	type : 'GET',
+	    	type : 'POST',
 	    	dataType: 'json',
 	    	jsonp: "callback",
 	    	success : function (result) {
