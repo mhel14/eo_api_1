@@ -21,7 +21,7 @@ function createCORSRequest(method, url) {
     // Check if the XMLHttpRequest object has a "withCredentials" property.
     // "withCredentials" only exists on XMLHTTPRequest2 objects.
     xhr.open(method, url, true);
-    console.log('1 get url');
+    console.log('1 get return');
 
   } else if (typeof XDomainRequest != "undefined") {
 
@@ -37,7 +37,7 @@ function createCORSRequest(method, url) {
     console.log('3');
 
   }
-  //return xhr;
+  return xhr;
 }
 
 var xhr = createCORSRequest('GET', url);
