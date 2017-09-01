@@ -69,7 +69,7 @@ $.ajax({
     xhrFields: {
        withCredentials: true
     },
-    crossDomain: true
+    crossDomain: true,
     success: function (data) {
         console.log(data);
     }
