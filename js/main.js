@@ -21,7 +21,7 @@ function createCORSRequest(method, url) {
     // Check if the XMLHttpRequest object has a "withCredentials" property.
     // "withCredentials" only exists on XMLHTTPRequest2 objects.
     xhr.open(method, url, true);
-    console.log('1 get return status2');
+    console.log('1 get return status2 aj');
 
   } else if (typeof XDomainRequest != "undefined") {
 
@@ -54,7 +54,7 @@ $('.get-data').click(function() {
 
 
 $.ajax({
-    url: url ,
+    url: 'https://emailoctopus.com/api/1.2/campaigns?api_key=6846d2af-ed93-11e6-8561-06ead731d453' ,
     dataType: 'JSONP',
     jsonpCallback: 'callback',
     type: 'GET',
